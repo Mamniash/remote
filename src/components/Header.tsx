@@ -22,13 +22,15 @@ const Header = () => {
 					className='flex items-center'
 				>
 					<Link href='#head'>
-						<Image
-							src='/logo.png'
-							alt='Логотип'
-							width={150}
-							height={40}
-							className='h-auto w-auto'
-						/>
+						<span
+							className='text-xl font-bold  italic'
+							style={{
+								textDecoration: 'underline',
+								textDecorationColor: '#934a3a'
+							}}
+						>
+							Аптечка&nbsp;спокойствия
+						</span>
 					</Link>
 				</motion.div>
 
@@ -67,7 +69,7 @@ const Header = () => {
 						size='large'
 						onClick={() => setIsModalOpen(true)}
 					>
-						{isMobile ? 'Заказать' : 'Заказать сейчас'}
+						{isMobile ? 'Подобрать' : 'Подобрать сейчас'}
 					</Button>
 					<OrderModal
 						open={isModalOpen}

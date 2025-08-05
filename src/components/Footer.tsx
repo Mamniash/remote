@@ -19,15 +19,15 @@ const Footer = () => {
 				<div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-6'>
 					<div>
 						<Link
-							href='https://companies.rbc.ru/trademark/763184/est-chto-poest/'
+							href='https://www.apteka.ru/'
 							target='_blank'
 							className='text-2xl font-bold'
 						>
-							Есть что поесть
+							Аптечка спокойствия
 						</Link>
 						<p className='text-sm text-gray-400 mt-2 max-w-xs'>
-							Меню, план питания и доставка —
-							всё&nbsp;в&nbsp;одном&nbsp;месте.
+							Персональная домашняя аптечка для
+							семьи&nbsp;с&nbsp;доставкой
 						</p>
 					</div>
 
@@ -35,7 +35,7 @@ const Footer = () => {
 					<div className='w-full md:w-auto flex justify-center md:justify-end'>
 						<div className='flex gap-10 text-white text-xl'>
 							<Link
-								href='https://www.facebook.com/eatchefs/'
+								href='https://www.facebook.com/apteka.ru'
 								target='_blank'
 								aria-label='Facebook'
 								className='hover:text-gray-300 transition'
@@ -44,7 +44,7 @@ const Footer = () => {
 							</Link>
 
 							<Link
-								href='https://www.instagram.com/foodband.ru/'
+								href='https://www.instagram.com/apteka_ru/'
 								target='_blank'
 								aria-label='Instagram'
 								className='hover:text-gray-300 transition'
@@ -53,7 +53,7 @@ const Footer = () => {
 							</Link>
 
 							<Link
-								href='https://www.youtube.com/channel/UCwnLstpY7RcjKVO9Fpn5gJA'
+								href='https://www.youtube.com/channel/UCs9d9IxxLvxeHzBjmOecRxA'
 								target='_blank'
 								aria-label='YouTube'
 								className='hover:text-gray-300 transition'
@@ -62,7 +62,7 @@ const Footer = () => {
 							</Link>
 
 							<Link
-								href='https://t.me/s/Poedim_TV'
+								href='https://t.me/apteka_ru'
 								target='_blank'
 								aria-label='Telegram'
 								className='hover:text-gray-300 transition'
@@ -74,17 +74,17 @@ const Footer = () => {
 				</div>
 
 				<div className='text-sm text-gray-400 flex flex-col md:flex-row justify-between items-start gap-2'>
-					<p>© {currentYear} Есть что поесть. Все права защищены.</p>
+					<p>© {currentYear} Аптечка спокойствия. Все права защищены.</p>
 					<div className='flex flex-wrap gap-4 justify-center md:justify-end'>
 						<Link
-							href='https://companies.rbc.ru/trademark/763184/est-chto-poest/'
+							href='https://www.apteka.ru/about/'
 							target='_blank'
 							className='hover:text-white transition'
 						>
 							Правовая информация
 						</Link>
 						<Link
-							href='https://yandex.ru/maps/org/yest_chto_poyest/241329877982/?ll=50.215007%2C53.225566&z=15'
+							href='https://yandex.ru/maps/org/apteka_ru/241329877982/?ll=50.215007%2C53.225566&z=15'
 							target='_blank'
 							className='hover:text-white transition'
 						>
@@ -92,7 +92,7 @@ const Footer = () => {
 							Яндекс Карты
 						</Link>
 						<Link
-							href='https://2gis.ru/samara/branches/70000001028612502'
+							href='https://2gis.ru/moscow/branches/70000001028612502'
 							target='_blank'
 							className='hover:text-white transition'
 						>
