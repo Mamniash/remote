@@ -22,13 +22,7 @@ const Header = () => {
 					className='flex items-center'
 				>
 					<Link href='#head'>
-						<span
-							className='text-xl font-bold  italic'
-							style={{
-								textDecoration: 'underline',
-								textDecorationColor: '#934a3a'
-							}}
-						>
+						<span className='text-xl font-bold  italic'>
 							Аптечка&nbsp;спокойствия
 						</span>
 					</Link>
