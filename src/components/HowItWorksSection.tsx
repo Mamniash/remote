@@ -24,28 +24,28 @@ const HowItWorksSection = () => {
 		{
 			title: 'Страх потери контроля?',
 			description: 'Укажите возраст, вес, аллергию и особенности ребёнка.',
-			imageSrc: '/images/work2.jpg',
+			imageSrc: '/images/work1.jpg',
 			imageAlt: 'Выбор меню'
 		},
 		{
 			title: 'Панический поиск лекарств в темноте?',
 			description:
 				'Получаете аптечку «под ключ» с подписанными упаковками и дозировкой.',
-			imageSrc: '/images/work4.jpg',
+			imageSrc: '/images/work2.jpg',
 			imageAlt: 'Безопасные продукты'
 		},
 		{
 			title: 'Сомневаетесь в дозе и сроках годности?',
 			description:
 				'Личный кабинет напомнит о проверке медикаментов и пошагово подскажет дозировку.',
-			imageSrc: '/images/work5.jpg',
+			imageSrc: '/images/work3.jpg',
 			imageAlt: 'Приготовление блюд'
 		},
 		{
 			title: 'Боитесь остаться без помощи ночью?',
 			description:
 				'Круглосуточный чат с врачом: мгновенный ответ даже в\u00A03:00\u00A0утра.',
-			imageSrc: '/images/work5.jpg',
+			imageSrc: '/images/work4.jpg',
 			imageAlt: 'Приготовление блюд'
 		},
 		{
