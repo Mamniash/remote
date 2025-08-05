@@ -24,11 +24,8 @@ const OrderModal: React.FC<OrderModalProps> = ({ open, onClose }) => {
 			maskStyle={{ backgroundColor: 'rgba(0, 0, 0, 0.9)' }}
 		>
 			<div className='text-center p-4'>
-				<Title level={4}>Получите идеальное меню прямо&nbsp;сейчас!</Title>
-				<Paragraph>
-					Оставьте номер телефона — мы подберем для вас персональное меню и
-					отправим в&nbsp;течение&nbsp;10&nbsp;секунд.
-				</Paragraph>
+				<Title level={4}>Укажите ваш номер</Title>
+				<Paragraph>Мы перезвоним и подберём аптечку для вас</Paragraph>
 
 				<SubscriptionForm />
 			</div>

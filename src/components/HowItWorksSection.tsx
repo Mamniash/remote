@@ -22,23 +22,33 @@ const HowItWorksSection = () => {
 
 	const steps = [
 		{
-			title: 'Выберите меню для гастрита',
-			description:
-				'Подберите меню, адаптированное под ваш тип\u00A0гастрита и стадию\u00A0заболевания',
+			title: 'Персональный подбор',
+			description: 'Собираем аптечку под вашу семью и потребности',
 			imageSrc: '/images/work2.jpg',
 			imageAlt: 'Выбор меню'
 		},
 		{
-			title: 'Получите безопасные ингредиенты',
-			description:
-				'Все продукты проверены на отсутствие раздражающих компонентов\u00A0и\u00A0аллергенов',
+			title: 'Экстренная поддержка',
+			description: '24/7 чат с врачом — помощь в любой ситуации',
 			imageSrc: '/images/work4.jpg',
 			imageAlt: 'Безопасные продукты'
 		},
 		{
-			title: 'Готовьте легко и вкусно',
+			title: 'Безопасность ребёнка',
+			description: 'Чёткие инструкции и дозировки с учётом возраста',
+			imageSrc: '/images/work5.jpg',
+			imageAlt: 'Приготовление блюд'
+		},
+		{
+			title: 'Автоматическое обновление',
 			description:
-				'Простые рецепты с минимальным количеством шагов и мягкими вкусами — готовьте\u00A0за\u00A015-20\u00A0минут',
+				'Контроль сроков годности и пополнение аптечки без вашего участия',
+			imageSrc: '/images/work5.jpg',
+			imageAlt: 'Приготовление блюд'
+		},
+		{
+			title: 'Всё под рукой',
+			description: 'Доставка аптечки и инструкций на дом, без забот',
 			imageSrc: '/images/work5.jpg',
 			imageAlt: 'Приготовление блюд'
 		}
@@ -49,7 +59,7 @@ const HowItWorksSection = () => {
 			<div className='container mx-auto px-4'>
 				<motion.div className='text-center mb-8'>
 					<h2 className='text-3xl md:text-4xl font-bold mb-2'>
-						Как мы помогаем сохранить здоровье желудка
+						Как работает сервис
 					</h2>
 				</motion.div>
 
