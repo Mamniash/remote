@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, useEffect } from 'react'
 import { Form, Input, Button, Spin } from 'antd'
 import { motion } from 'framer-motion'
@@ -77,6 +79,12 @@ const SubscriptionForm: React.FC<SubscriptionFormProps> = ({
 		}
 	}
 
+	// Фильтрация ввода только цифр и "+" для телефона
+	const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const value = e.target.value.replace(/[^0-9+]/g, '') // Заменяем всё, кроме цифр и "+"
+		form.setFieldsValue({ phone: value })
+	}
+
 	return (
 		<>
 			<Form
@@ -94,6 +102,7 @@ const SubscriptionForm: React.FC<SubscriptionFormProps> = ({
 					<Input
 						placeholder='Телефон'
 						className='rounded-full px-4 py-2'
+						onChange={handlePhoneChange} // Обрабатываем изменение в поле телефона
 					/>
 				</Form.Item>
 
@@ -103,7 +112,7 @@ const SubscriptionForm: React.FC<SubscriptionFormProps> = ({
 					shape='round'
 					size='large'
 					className='primary-bg mr-3 font-semibold'
-					disabled={loading}
+					disabled={loading || !form.isFieldsTouched(true)} // Проверка на заполнение любого поля
 					block
 				>
 					{loading ? <Spin /> : 'Подобрать аптечку'}
