@@ -31,17 +31,17 @@ const HeroSection = () => {
 					initial={{ opacity: 0, x: 50 }}
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.8 }}
-					className='w-full md:w-1/2 mt-8 md:mt-0 md:pl-12'
+					className='w-full md:w-1/2 mt-8 md:mt-0 md:pl-12' //&nbsp;
 				>
 					<h1 className='text-4xl md:text-5xl font-bold mb-4'>
 						<span className='primary-color'>
-							Домашняя аптечка “Под ключ”
+							Аптечка спокойствия для молодых родителей
 						</span>
 					</h1>
 
 					<p className='text-lg mb-8'>
-						Всё для здоровья ребёнка — с учётом возраста и особенностей.
-						Доставка и обновление под контролем.
+						Всё для здоровья ребёнка — Индивидуальная аптечка на все
+						случаи с автопополнением.
 					</p>
 
 					{/* Кнопка "Начать" */}
