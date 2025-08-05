@@ -23,7 +23,7 @@ const OrderSection = () => {
 							className='w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center'
 						>
 							<h2 className='text-2xl md:text-3xl font-bold mb-6'>
-								Получить аптечку под семью
+								Даем гарантию
 							</h2>
 							<p className='text-lg mb-6'>
 								Если в аптечке не окажется нужного препарата, то оплатим
@@ -51,17 +51,17 @@ const OrderSection = () => {
 										ease: 'easeInOut'
 									}}
 								>
-									Получить меню
+									Подобрать аптечку
 								</motion.button>
 							</motion.div>
 
 							{isMobile ? (
 								<p className='text-sm text-gray-600 mt-4'>
-									Оставьте заявку — и получите рекомендации бесплатно
+									Оставьте телефон — и получите индивидуальную аптечку
 								</p>
 							) : (
 								<p className='text-sm text-gray-600'>
-									Оставьте заявку — и получите рекомендации бесплатно
+									Оставьте телефон — и получите индивидуальную аптечку
 								</p>
 							)}
 
