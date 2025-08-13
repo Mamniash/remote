@@ -26,8 +26,8 @@ const Footer = () => {
 							Аптечка спокойствия
 						</Link>
 						<p className='text-sm text-gray-400 mt-2 max-w-xs'>
-							Персональная домашняя аптечка для
-							семьи&nbsp;с&nbsp;доставкой
+							Персональная домашняя аптечка для семьи, готовая к любым
+							ситуациям.
 						</p>
 					</div>
 
@@ -74,7 +74,7 @@ const Footer = () => {
 				</div>
 
 				<div className='text-sm text-gray-400 flex flex-col md:flex-row justify-between items-start gap-2'>
-					<p>© {currentYear} Аптечка спокойствия. Все права защищены.</p>
+					<p>Сервис не занимается доставкой лекарственных препаратов </p>
 					<div className='flex flex-wrap gap-4 justify-center md:justify-end'>
 						<Link
 							href='https://www.apteka.ru/about/'
