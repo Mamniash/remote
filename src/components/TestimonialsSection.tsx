@@ -6,9 +6,9 @@ import { StarFilled } from '@ant-design/icons'
 import Link from 'next/link'
 
 const avatars = [
-        'https://ui-avatars.com/api/?name=Анна&background=934a3a&color=fff&rounded=true&size=64',
-        'https://ui-avatars.com/api/?name=Дмитрий&background=934a3a&color=fff&rounded=true&size=64',
-        'https://ui-avatars.com/api/?name=Екатерина&background=934a3a&color=fff&rounded=true&size=64'
+        'https://ui-avatars.com/api/?name=Анна&background=611f69&color=fff&rounded=true&size=64',
+        'https://ui-avatars.com/api/?name=Дмитрий&background=611f69&color=fff&rounded=true&size=64',
+        'https://ui-avatars.com/api/?name=Екатерина&background=611f69&color=fff&rounded=true&size=64'
 ]
 
 const starCount = 5
@@ -33,7 +33,7 @@ const testimonials = [
 
 const TestimonialsSection = () => {
 	return (
-		<section className='py-16 bg-gray-200'>
+                <section className='py-16 bg-[var(--background)]'>
 			<div className='container mx-auto px-4 max-w-7xl'>
                                 <h2 className='text-3xl md:text-4xl font-bold mb-12 max-w-md mx-auto text-center'>
                                         Отзывы

@@ -10,7 +10,7 @@ const GuaranteeSection = () => {
         const [isModalOpen, setIsModalOpen] = useState(false)
 
         return (
-                <section className='py-12 bg-gray-100 scroll-mt-16 ' id='order'>
+                <section className='py-12 bg-[var(--background)] scroll-mt-16 ' id='order'>
                         <div className='container mx-auto px-4'>
                                 <div className='bg-white rounded-xl overflow-hidden shadow-lg p-8 md:p-12 text-center'>
                                         <h2 className='text-2xl md:text-3xl font-bold mb-6'>
@@ -30,7 +30,7 @@ const GuaranteeSection = () => {
                                         >
                                                 <motion.button
                                                         onClick={() => setIsModalOpen(true)}
-                                                        className='w-full max-w-sm relative bg-[#934a3a] hover:bg-[#b95c4d] text-white font-semibold px-4 py-3 rounded-full text-base shadow-md'
+                                                        className='w-full max-w-sm relative btn-primary shadow-md'
                                                         whileHover={{ scale: 1.02 }}
                                                         whileTap={{ scale: 0.98 }}
                                                         animate={{

@@ -5,12 +5,13 @@
 @tailwind utilities;
 
 :root {
-  --primary: #934a3a;
-  --background: #f7f7f6;
-  --accent: #538847;
-  --text: #13130f;
-  --secondary: #aa9352;
-  --gray: #92958e;
+  /* Slack-inspired color palette */
+  --primary: #611f69;
+  --background: #f4ede4;
+  --accent: #36c5f0;
+  --text: #1d1c1d;
+  --secondary: #2eb67d;
+  --gray: #696969;
 }
 
 body {
