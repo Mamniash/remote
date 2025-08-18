@@ -22,7 +22,7 @@ const Header = () => {
 				>
                                         <Link href='#head'>
                                                 <span className='text-xl font-bold italic'>
-                                                        Бот&nbsp;для&nbsp;удалённых&nbsp;команд
+                                                        Вовлекатор228
                                                 </span>
                                         </Link>
 				</motion.div>

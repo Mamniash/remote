@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-        title: 'Бот для удалённых команд',
+        title: 'Вовлекатор228',
         description:
                 'Запускайте 4–6-недельные сценарии для повышения вовлечённости и роста NPS на 20%. Автоматизация встреч, напоминаний и отчётов с интеграцией в Telegram, Teams или Slack.',
         icons: {
