@@ -1,10 +1,9 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Button } from 'antd'
-import Image from 'next/image'
 import useIsMobile from '@/helpers/useIsMobile'
 import OrderModal from './OrderModal'
 
@@ -21,11 +20,11 @@ const Header = () => {
 					transition={{ duration: 0.5 }}
 					className='flex items-center'
 				>
-					<Link href='#head'>
-						<span className='text-xl font-bold  italic'>
-							Аптечка&nbsp;спокойствия
-						</span>
-					</Link>
+                                        <Link href='#head'>
+                                                <span className='text-xl font-bold italic'>
+                                                        Бот&nbsp;для&nbsp;удалённых&nbsp;команд
+                                                </span>
+                                        </Link>
 				</motion.div>
 
 				<motion.div
@@ -42,18 +41,7 @@ const Header = () => {
 					className='flex items-center gap-4'
 				>
 					{/* Условная отрисовка кнопки "Подробнее" для мобильных устройств */}
-					{!isMobile && (
-						<Link href='#about'>
-							<Button
-								className='py-4 text-center'
-								type='default'
-								shape='round'
-								size='large'
-							>
-								Подробнее
-							</Button>
-						</Link>
-					)}
+                                        {/* placeholder for additional actions */}
 
 					{/* Условная отрисовка текста на кнопке "Заказать" в зависимости от разрешения */}
 					<Button
@@ -63,7 +51,7 @@ const Header = () => {
 						size='large'
 						onClick={() => setIsModalOpen(true)}
 					>
-						{isMobile ? 'Подобрать' : 'Подобрать сейчас'}
+                                                {isMobile ? 'Запустить' : 'Запустить сценарий'}
 					</Button>
 					<OrderModal
 						open={isModalOpen}
