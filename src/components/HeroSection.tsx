@@ -8,7 +8,10 @@ const HeroSection = () => {
         const [isModalOpen, setIsModalOpen] = useState(false)
 
         return (
-                <section className='pt-32 pb-16 text-center' id='head'>
+                <section
+                        className='pt-32 pb-16 text-center bg-gradient-to-tr from-[#611f69] via-[#e01e5a] to-[#36c5f0] text-white'
+                        id='head'
+                >
                         <div className='container mx-auto px-4'>
                                 <h1 className='text-4xl md:text-5xl font-bold mb-4'>
                                         Бот для удалённых команд
@@ -22,7 +25,7 @@ const HeroSection = () => {
 
                                 <motion.button
                                         onClick={() => setIsModalOpen(true)}
-                                        className='w-full max-w-sm bg-[#934a3a] hover:bg-[#b95c4d] text-white font-semibold px-4 py-3 rounded-full text-base shadow-md'
+                                        className='w-full max-w-sm btn-primary shadow-md'
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
                                         animate={{

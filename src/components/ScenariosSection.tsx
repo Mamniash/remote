@@ -43,7 +43,7 @@ const ScenariosSection = () => {
                                         ))}
                                 </div>
                                 <motion.button
-                                        className='bg-[#934a3a] hover:bg-[#b95c4d] text-white font-semibold px-8 py-3 rounded-full'
+                                        className='btn-primary px-8 py-3'
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
                                 >

@@ -69,12 +69,12 @@ const AdvantageModal: React.FC<AdvantageModalProps> = ({
 		]
 	}
 
-	const chartColors = {
-		price: ['#934a3a', '#ffc658', '#82ca9d', '#8884d8'],
-		allInOne: '#347a8a',
-		discounts: '#67b26f',
-		balance: '#bb86fc'
-	}
+        const chartColors = {
+                price: ['#611f69', '#36c5f0', '#2eb67d', '#e01e5a'],
+                allInOne: '#36c5f0',
+                discounts: '#2eb67d',
+                balance: '#e01e5a'
+        }
 
 	const renderChart = () => {
 		switch (type) {
