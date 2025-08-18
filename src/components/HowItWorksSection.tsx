@@ -52,9 +52,12 @@ const HowItWorksSection = () => {
                                 <h2 className='text-3xl md:text-4xl font-bold mb-8 text-center'>
                                         Как работает сервис
                                 </h2>
-                                <div className='space-y-8 max-w-4xl mx-auto'>
+                                <div className='flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4'>
                                         {features.map(({ title, description }, idx) => (
-                                                <div key={idx}>
+                                                <div
+                                                        key={idx}
+                                                        className='shrink-0 w-72 bg-white p-4 rounded-lg shadow snap-start'
+                                                >
                                                         <h3 className='text-xl font-semibold mb-2'>{title}</h3>
                                                         <p className='text-gray-700'>{description}</p>
                                                 </div>

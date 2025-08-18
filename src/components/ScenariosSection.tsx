@@ -31,9 +31,12 @@ const ScenariosSection = () => {
                 <section className='py-16 bg-white'>
                         <div className='container mx-auto px-4 text-center'>
                                 <h2 className='text-3xl md:text-4xl font-bold mb-8'>Готовые сценарии</h2>
-                                <div className='space-y-6 text-left max-w-3xl mx-auto mb-8'>
+                                <div className='flex gap-6 overflow-x-auto snap-x snap-mandatory mb-8 pb-4'>
                                         {scenarios.map(({ title, description }, idx) => (
-                                                <div key={idx}>
+                                                <div
+                                                        key={idx}
+                                                        className='shrink-0 w-72 bg-gray-50 p-4 rounded-lg shadow text-left snap-start'
+                                                >
                                                         <h3 className='text-xl font-semibold mb-2'>{title}</h3>
                                                         <p className='text-gray-700'>{description}</p>
                                                 </div>
