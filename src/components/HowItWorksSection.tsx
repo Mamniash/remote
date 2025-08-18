@@ -1,98 +1,69 @@
 'use client'
 
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { useKeenSlider } from 'keen-slider/react'
-import 'keen-slider/keen-slider.min.css'
-import ProcessStep from '@/components/ProcessStep'
+import React from 'react'
+
+const features = [
+        {
+                title: 'Системные циклы, а не разовые мероприятия',
+                description:
+                        'Мы предлагаем долгосрочные циклы активности: 4-6 недель, которые постепенно формируют у сотрудников привычку к регулярным взаимодействиям. С каждым циклом растёт не только вовлечённость, но и осознание ценности этих мероприятий для коллектива.'
+        },
+        {
+                title: 'Рандомные встречи для укрепления связей',
+                description:
+                        'Еженедельные случайные встречи для улучшения горизонтальных связей. Система автоматически подбирает участников, обеспечивая разнообразие в составах. Это помогает уменьшить барьеры между отделами, локациями и ролями. Встречи сразу попадают в календарь, а система отправляет напоминания в Telegram.'
+        },
+        {
+                title: 'Интерактивные игры и викторины',
+                description:
+                        'Элементы геймификации для поддержания интереса и вовлечённости сотрудников. Игры и викторины могут быть адаптированы под вашу корпоративную культуру и включены в Zoom, Teams или Slack для удобства. Это не только развлекает, но и способствует более лёгкому общению и лучшему знакомству.'
+        },
+        {
+                title: 'Опросы и мини-кейсы',
+                description:
+                        'Регулярные опросы вовлечённости и практичные мини-кейсы помогают поддерживать диалог и вовлечённость сотрудников. Через анкетирование мы собираем обратную связь, а также решаем реальные рабочие задачи. Всё это автоматизируется и доставляется непосредственно в каналы, такие как Telegram, для минимизации усилий с вашей стороны.'
+        },
+        {
+                title: 'Анти-силос-матчинг для лучшего взаимодействия',
+                description:
+                        'Наш алгоритм анти-силос-матчинга подбирает пары и группы для общения между различными департаментами, локациями или часовыми зонами. Это открывает новые горизонты для обмена знаниями и опытом, а также помогает сотрудникам лучше понимать работу других команд.'
+        },
+        {
+                title: 'Готовые сценарии для быстрого старта',
+                description:
+                        'Мы подготовили набор готовых сценариев для запуска, включающих онбординг, кросс-функциональное взаимодействие, менторинг и развлекательные мероприятия. Вам не нужно тратить время на создание контента — всё уже подготовлено.'
+        },
+        {
+                title: 'Автоматические напоминания для участников',
+                description:
+                        'Система автоматически отправляет напоминания участникам о встречах, вовлечении в обсуждения или прохождении опросов. Это помогает не упускать важные моменты и повышает качество взаимодействий.'
+        },
+        {
+                title: 'Подробные отчёты для HR',
+                description:
+                        'Дашборды с детализированными отчётами по активности сотрудников, участию в встречах и результатам взаимодействий. Мы предоставляем удобный экспорт в PDF, чтобы менеджеры и HR могли легко отслеживать эффективность наших сценариев.'
+        }
+]
 
 const HowItWorksSection = () => {
-	const [currentSlide, setCurrentSlide] = useState(0)
-
-	const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
-		slides: { perView: 1.2, spacing: 16 },
-		breakpoints: {
-			'(min-width: 640px)': { slides: { perView: 2.2, spacing: 20 } },
-			'(min-width: 1024px)': { slides: { perView: 3, spacing: 24 } }
-		},
-		slideChanged(slider) {
-			setCurrentSlide(slider.track.details.rel)
-		}
-	})
-
-	const steps = [
-		{
-			title: 'Страх потери контроля?',
-			description: 'Укажите возраст, вес, аллергию и особенности ребёнка.',
-			imageSrc: '/images/work1.jpg',
-			imageAlt: 'Выбор меню'
-		},
-		{
-			title: 'Панический поиск лекарств в темноте?',
-			description:
-				'Получаете аптечку «под ключ» с подписанными упаковками и дозировкой.',
-			imageSrc: '/images/work2.jpg',
-			imageAlt: 'Безопасные продукты'
-		},
-		{
-			title: 'Сомневаетесь в дозе и сроках годности?',
-			description:
-				'Личный кабинет напомнит о проверке медикаментов и пошагово подскажет дозировку.',
-			imageSrc: '/images/work3.jpg',
-			imageAlt: 'Приготовление блюд'
-		},
-		{
-			title: 'Боитесь остаться без помощи ночью?',
-			description:
-				'Круглосуточный чат с врачом: мгновенный ответ даже в\u00A03:00\u00A0утра.',
-			imageSrc: '/images/work4.jpg',
-			imageAlt: 'Приготовление блюд'
-		},
-		{
-			title: 'Страх не успеть пополнить аптечку?',
-			description:
-				'Авто-напоминание до истечения срока годности',
-			imageSrc: '/images/work5.jpg',
-			imageAlt: 'Приготовление блюд'
-		}
-	]
-
-	return (
-		<section className='pb-16 pt-6 bg-gray-50'>
-			<div className='container mx-auto px-4'>
-				<motion.div className='text-center mb-8'>
-					<h2 className='text-3xl md:text-4xl font-bold mb-2'>
-						Как работает сервис
-					</h2>
-				</motion.div>
-
-				<div ref={sliderRef} className='keen-slider'>
-					{steps.map((step, index) => (
-						<ProcessStep
-							key={index}
-							title={step.title}
-							description={step.description}
-							imageSrc={step.imageSrc}
-							imageAlt={step.imageAlt}
-							delay={0.1 * index}
-						/>
-					))}
-				</div>
-
-				<div className='flex justify-center mt-8'>
-					{steps.map((_, index) => (
-						<button
-							key={index}
-							className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full mx-2 transition-colors duration-300 ${
-								currentSlide === index ? 'bg-[#934a3a]' : 'bg-[#ccc]'
-							}`}
-							onClick={() => slider.current?.moveToIdx(index)}
-						/>
-					))}
-				</div>
-			</div>
-		</section>
-	)
+        return (
+                <section className='pb-16 pt-6 bg-gray-50'>
+                        <div className='container mx-auto px-4'>
+                                <h2 className='text-3xl md:text-4xl font-bold mb-8 text-center'>
+                                        Как работает сервис
+                                </h2>
+                                <div className='space-y-8 max-w-4xl mx-auto'>
+                                        {features.map(({ title, description }, idx) => (
+                                                <div key={idx}>
+                                                        <h3 className='text-xl font-semibold mb-2'>{title}</h3>
+                                                        <p className='text-gray-700'>{description}</p>
+                                                </div>
+                                        ))}
+                                </div>
+                        </div>
+                </section>
+        )
 }
 
 export default HowItWorksSection
+

@@ -2,8 +2,9 @@ import React from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection'
 import HowItWorksSection from '@/components/HowItWorksSection'
-import MealPlansSection from '@/components/MealPlansSection'
-import OrderSection from '@/components/OrderSection'
+import WhyChooseSection from '@/components/WhyChooseSection'
+import ScenariosSection from '@/components/ScenariosSection'
+import GuaranteeSection from '@/components/GuaranteeSection'
 import Footer from '@/components/Footer'
 import TestimonialsSection from '@/components/TestimonialsSection'
 
@@ -12,11 +13,12 @@ export default function Home() {
 		<main>
 			<Header />
 			<HeroSection />
-			<HowItWorksSection />
-			<MealPlansSection />
-			<TestimonialsSection /> {/* Новая секция отзывов */}
-			<OrderSection />
-			<Footer />
+                        <HowItWorksSection />
+                        <WhyChooseSection />
+                        <ScenariosSection />
+                        <TestimonialsSection />
+                        <GuaranteeSection />
+                        <Footer />
 		</main>
 	)
 }

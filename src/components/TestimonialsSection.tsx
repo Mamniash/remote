@@ -6,41 +6,38 @@ import { StarFilled } from '@ant-design/icons'
 import Link from 'next/link'
 
 const avatars = [
-	'https://ui-avatars.com/api/?name=Ирина&background=934a3a&color=fff&rounded=true&size=64',
-	'https://ui-avatars.com/api/?name=Виталий&background=934a3a&color=fff&rounded=true&size=64',
-	'https://ui-avatars.com/api/?name=Наталья&background=934a3a&color=fff&rounded=true&size=64'
+        'https://ui-avatars.com/api/?name=Анна&background=934a3a&color=fff&rounded=true&size=64',
+        'https://ui-avatars.com/api/?name=Дмитрий&background=934a3a&color=fff&rounded=true&size=64',
+        'https://ui-avatars.com/api/?name=Екатерина&background=934a3a&color=fff&rounded=true&size=64'
 ]
 
 const starCount = 5
 
 const testimonials = [
-	{
-		name: 'Ольга',
-		// subtitle: 'стабилизировала гастрит',
-		text: 'Температура 39 ночью. Я одна. Минуты на счету. Инструкция в приложении и чат с врачом помогли дать точную дозу. Ребёнок в порядке, я\u00A0в\u00A0спокойствии.',
-		tag: 'Безопасно и спокойно'
-	},
-	{
-		name: 'Екатерина',
-		// subtitle: 'пробовал разные диеты',
-		text: 'Удобный сервис: я забыла обновить аптечку, а приложение напомнило о просроченных препаратах!',
-		tag: 'Стабильность и надежность'
-	},
-	{
-		name: 'Ирина',
-		// subtitle: 'следит за диетой',
-		text: 'Ожог кипятком, скорая далеко. С приложением я знала, что делать: приложила компресс, дала подходящий препарат и ждала врача\u00A0без\u00A0паники.',
-		tag: 'Удобство и поддержка'
-	}
+        {
+                name: 'Анна, HRBP',
+                text: '«Онбординг-сценарий помог новичкам быстрее адаптироваться и чувствовать себя частью команды.»',
+                tag: 'Онбординг 101'
+        },
+        {
+                name: 'Дмитрий, тимлид разработки',
+                text: '«Анти-силос-сценарий сильно улучшил взаимодействие между отделами, снизив напряжение и увеличив продуктивность.»',
+                tag: 'Анти-силос'
+        },
+        {
+                name: 'Екатерина, People Ops',
+                text: '«Отчёты и аналитика, которые предоставляет система, позволили нам отслеживать прогресс и делать выводы по улучшению вовлечённости.»',
+                tag: 'Аналитика'
+        }
 ]
 
 const TestimonialsSection = () => {
 	return (
 		<section className='py-16 bg-gray-200'>
 			<div className='container mx-auto px-4 max-w-7xl'>
-				<h2 className='text-3xl md:text-4xl font-bold mb-12 max-w-md mx-auto text-center'>
-					А ещё лучше про нас расскажут отзывы наших клиентов с&nbsp;детьми
-				</h2>
+                                <h2 className='text-3xl md:text-4xl font-bold mb-12 max-w-md mx-auto text-center'>
+                                        Отзывы
+                                </h2>
 
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
 					{testimonials.map(({ name, text, tag }, idx) => (

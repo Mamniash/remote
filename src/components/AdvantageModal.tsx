@@ -261,7 +261,7 @@ const AdvantageModal: React.FC<AdvantageModalProps> = ({
 						size='large'
 						onClick={() => setOrderOpen(true)}
 					>
-						Подобрать аптечку
+                                            Запустить сценарий
 					</Button>
 				</div>
 			</Modal>
