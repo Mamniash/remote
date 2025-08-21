@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 	description:
 		'Запускайте 4–6-недельные сценарии для повышения вовлечённости и роста NPS на 20%.',
 	icons: {
-		icon: '/public/image.png'
+		icon: 'image.png'
 	}
 }
 
