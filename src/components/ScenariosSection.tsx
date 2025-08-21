@@ -7,38 +7,30 @@ import { motion } from 'framer-motion'
 import OrderModal from './OrderModal'
 
 const scenarios = [
-        {
-                title: 'Онбординг 101',
-                description:
-                        'Сценарий для новых сотрудников: знакомства, mini-кейсы, ретроспективы и общение с наставниками. Всё, что нужно для успешного старта.',
-                image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80'
-                        'Сценарий для новых сотрудников: знакомства, mini-кейсы, ретроспективы и общение с наставниками. Всё, что нужно для успешного старта.',
-                image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80'
-        },
-        {
-                title: 'Кросс-функ «Анти-силос»',
-                description:
-                        'Взаимодействие между различными департаментами, с учётом часовых зон и ролей. Это создаёт новые каналы общения и улучшает синергию между командами.',
-                image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'
-                        'Взаимодействие между различными департаментами, с учётом часовых зон и ролей. Это создаёт новые каналы общения и улучшает синергию между командами.',
-                image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'
-        },
-        {
-                title: 'Экспресс-менторинг (4 недели)',
-                description:
-                        'Менторство от более опытных коллег для развития сотрудников средней квалификации. Сценарий включает чек-листы и планы развития.',
-                image: 'https://images.unsplash.com/photo-1559027615-e72ccddab8c5?auto=format&fit=crop&w=600&q=80'
-                        'Менторство от более опытных коллег для развития сотрудников средней квалификации. Сценарий включает чек-листы и планы развития.',
-                image: 'https://images.unsplash.com/photo-1559027615-e72ccddab8c5?auto=format&fit=crop&w=600&q=80'
-        },
-        {
-                title: 'Fan-игры & квизы (4 недели)',
-                description:
-                        'Весёлые и познавательные активности, такие как квизы и ice-breakers, для создания атмосферы дружбы и командного духа.',
-                image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80'
-                        'Весёлые и познавательные активности, такие как квизы и ice-breakers, для создания атмосферы дружбы и командного духа.',
-                image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80'
-        }
+	{
+		title: 'Онбординг 101',
+		description:
+			'Сценарий для новых сотрудников: знакомства, mini-кейсы, ретроспективы и общение с наставниками. Всё, что нужно для успешного старта.',
+		image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80'
+	},
+	{
+		title: 'Кросс-функ «Анти-силос»',
+		description:
+			'Взаимодействие между различными департаментами, с учётом часовых зон и ролей. Это создаёт новые каналы общения и улучшает синергию между командами.',
+		image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'
+	},
+	{
+		title: 'Экспресс-менторинг (4 недели)',
+		description:
+			'Менторство от более опытных коллег для развития сотрудников средней квалификации. Сценарий включает чек-листы и планы развития.',
+		image: 'https://images.unsplash.com/photo-1559027615-e72ccddab8c5?auto=format&fit=crop&w=600&q=80'
+	},
+	{
+		title: 'Fan-игры & квизы (4 недели)',
+		description:
+			'Весёлые и познавательные активности, такие как квизы и ice-breakers, для создания атмосферы дружбы и командного духа.',
+		image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80'
+	}
 ]
 
 const ScenariosSection = () => {
