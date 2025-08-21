@@ -23,7 +23,7 @@ const scenarios = [
 		title: 'Экспресс-менторинг (4 недели)',
 		description:
 			'Менторство от более опытных коллег для развития сотрудников средней квалификации. Сценарий включает чек-листы и планы развития.',
-                image: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=600&q=80'
+                image: 'https://share.google/images/Yy7ZioNpNL2leS2Rp'
         },
 	{
 		title: 'Fan-игры & квизы (4 недели)',
