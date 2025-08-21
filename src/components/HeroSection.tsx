@@ -16,12 +16,9 @@ id='head'
 <div className='container mx-auto px-4 flex flex-col-reverse items-center md:flex-row'>
 <div className='md:w-1/2 text-center md:text-left'>
 <h1 className='text-4xl md:text-5xl font-bold mb-4'>Вовлекатор</h1>
-<p className='text-lg mb-4'>
-Запускайте 4–6-недельные «Сценарии» для повышения вовлечённости и роста NPS на 20%.
-</p>
-<p className='text-lg mb-8'>
-Автоматизация встреч, напоминаний и отчётов. Интеграция с Telegram, Microsoft Teams или Slack (по запросу).
-</p>
+ <p className='text-lg mb-8'>
+ Запускайте 4–6-недельные «Сценарии» для повышения вовлечённости и роста NPS на 20%.
+ </p>
 <motion.button
 onClick={() => setIsModalOpen(true)}
 className='w-full max-w-sm btn-primary shadow-md'
@@ -36,8 +33,8 @@ duration: 2,
 repeat: Infinity,
 ease: 'easeInOut'
 }}
->
-Запустить сценарий
+    >
+    Запустить бота
 </motion.button>
 <OrderModal open={isModalOpen} onClose={() => setIsModalOpen(false)} />
 </div>

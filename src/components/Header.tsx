@@ -59,7 +59,7 @@ const Header = () => {
 						size='large'
 						onClick={() => setIsModalOpen(true)}
 					>
-                                                {isMobile ? 'Запустить' : 'Запустить сценарий'}
+                                                {isMobile ? 'Запустить' : 'Запустить бота'}
 					</Button>
 					<OrderModal
 						open={isModalOpen}

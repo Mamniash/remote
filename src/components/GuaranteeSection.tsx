@@ -22,9 +22,8 @@ const GuaranteeSection = () => {
                                                 transition={{ duration: 0.6 }}
                                         />
                                         <h2 className='text-2xl md:text-3xl font-bold mb-6'>Даём гарантию</h2>
-                                        <p className='text-lg text-gray-700 mb-6'>
-                                                Если за первый цикл (4–6 недель) мы не увеличим вовлечённость и NPS на 20%, мы
-                                                вернём вам деньги в 2 раза больше.
+                                        <p className='text-lg text-gray-700 mb-6 max-w-md mx-auto'>
+                                                За 4–6 недель повышаем вовлечённость и NPS минимум на 20%. Не получится — вернём оплату в двойном размере.
                                         </p>
 
                                         <motion.div
@@ -34,8 +33,8 @@ const GuaranteeSection = () => {
                                                 className='flex justify-center mb-6'
                                         >
                                                 <motion.button
-                                                        onClick={() => setIsModalOpen(true)}
-                                                        className='w-full max-w-sm relative btn-primary shadow-md'
+                                                onClick={() => setIsModalOpen(true)}
+                                                className='w-full max-w-sm relative btn-primary shadow-md'
                                                         whileHover={{ scale: 1.02 }}
                                                         whileTap={{ scale: 0.98 }}
                                                         animate={{
@@ -48,19 +47,19 @@ const GuaranteeSection = () => {
                                                                 ease: 'easeInOut'
                                                         }}
                                                 >
-                                                        Запустить сценарий
+                                                Запустить бота
                                                 </motion.button>
                                         </motion.div>
 
                                         {isMobile ? (
-                                                <p className='text-sm text-gray-600 mt-4'>
-                                                        Оставьте телефон — и мы поможем запустить сценарий
-                                                </p>
-                                        ) : (
-                                                <p className='text-sm text-gray-600'>
-                                                        Оставьте телефон — и мы поможем запустить сценарий
-                                                </p>
-                                        )}
+                                                  <p className='text-sm text-gray-600 mt-4'>
+                                                          Оставьте телефон — пришлём ссылку на демо-бота
+                                                  </p>
+                                          ) : (
+                                                  <p className='text-sm text-gray-600'>
+                                                          Оставьте телефон — пришлём ссылку на демо-бота
+                                                  </p>
+                                          )}
 
                                         <OrderModal
                                                 open={isModalOpen}
