@@ -116,7 +116,7 @@ const SubscriptionForm: React.FC<SubscriptionFormProps> = ({
 					disabled={loading || !form.isFieldsTouched(true)} // Проверка на заполнение любого поля
 					block
 				>
-                                        {loading ? <Spin /> : 'Запустить сценарий'}
+                                        {loading ? <Spin /> : 'Запустить бота'}
 				</Button>
 			</Form>
 
