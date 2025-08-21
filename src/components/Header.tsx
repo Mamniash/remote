@@ -13,7 +13,7 @@ const Header = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 
 	return (
-                <header className='bg-[var(--background)] shadow-sm py-4 fixed top-0 left-0 w-full z-50'>
+		<header className='bg-[var(--background)] shadow-sm py-4 fixed top-0 left-0 w-full z-50'>
 			<div className='container mx-auto px-4 flex justify-between items-center'>
 				<motion.div
 					initial={{ opacity: 0, y: -20 }}
@@ -21,18 +21,9 @@ const Header = () => {
 					transition={{ duration: 0.5 }}
 					className='flex items-center'
 				>
-                                        <Link href='#head' className='flex items-center'>
-                                                <Image
-                                                        src='https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=40&q=80'
-                                                        alt='Логотип Вовлекатор'
-                                                        width={40}
-                                                        height={40}
-                                                        className='mr-2 rounded'
-                                                />
-                                                <span className='text-xl font-bold italic'>
-                                                        Вовлекатор
-                                                </span>
-                                        </Link>
+					<Link href='#head' className='flex items-center'>
+						<span className='text-xl font-bold italic'>Вовлекатор</span>
+					</Link>
 				</motion.div>
 
 				<motion.div
@@ -49,7 +40,7 @@ const Header = () => {
 					className='flex items-center gap-4'
 				>
 					{/* Условная отрисовка кнопки "Подробнее" для мобильных устройств */}
-                                        {/* placeholder for additional actions */}
+					{/* placeholder for additional actions */}
 
 					{/* Условная отрисовка текста на кнопке "Заказать" в зависимости от разрешения */}
 					<Button
@@ -59,7 +50,7 @@ const Header = () => {
 						size='large'
 						onClick={() => setIsModalOpen(true)}
 					>
-                                                {isMobile ? 'Запустить' : 'Запустить бота'}
+						{isMobile ? 'Запустить' : 'Запустить бота'}
 					</Button>
 					<OrderModal
 						open={isModalOpen}
