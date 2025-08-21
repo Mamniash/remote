@@ -1,38 +1,41 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { useKeenSlider } from 'keen-slider/react'
 import { motion } from 'framer-motion'
+import OrderModal from './OrderModal'
 
 const scenarios = [
-        {
-                title: 'Онбординг 101',
-                description:
-                        'Сценарий для новых сотрудников: знакомства, mini-кейсы, ретроспективы и общение с наставниками. Всё, что нужно для успешного старта.',
-                image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80'
-        },
-        {
-                title: 'Кросс-функ «Анти-силос»',
-                description:
-                        'Взаимодействие между различными департаментами, с учётом часовых зон и ролей. Это создаёт новые каналы общения и улучшает синергию между командами.',
-                image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'
-        },
-        {
-                title: 'Экспресс-менторинг (4 недели)',
-                description:
-                        'Менторство от более опытных коллег для развития сотрудников средней квалификации. Сценарий включает чек-листы и планы развития.',
-                image: 'https://images.unsplash.com/photo-1559027615-e72ccddab8c5?auto=format&fit=crop&w=600&q=80'
-        },
-        {
-                title: 'Fan-игры & квизы (4 недели)',
-                description:
-                        'Весёлые и познавательные активности, такие как квизы и ice-breakers, для создания атмосферы дружбы и командного духа.',
-                image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80'
-        }
+	{
+		title: 'Онбординг 101',
+		description:
+			'Сценарий для новых сотрудников: знакомства, mini-кейсы, ретроспективы и общение с наставниками. Всё, что нужно для успешного старта.',
+		image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80'
+	},
+	{
+		title: 'Кросс-функ «Анти-силос»',
+		description:
+			'Взаимодействие между различными департаментами, с учётом часовых зон и ролей. Это создаёт новые каналы общения и улучшает синергию между командами.',
+		image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'
+	},
+	{
+		title: 'Экспресс-менторинг (4 недели)',
+		description:
+			'Менторство от более опытных коллег для развития сотрудников средней квалификации. Сценарий включает чек-листы и планы развития.',
+		image: 'https://images.unsplash.com/photo-1559027615-e72ccddab8c5?auto=format&fit=crop&w=600&q=80'
+	},
+	{
+		title: 'Fan-игры & квизы (4 недели)',
+		description:
+			'Весёлые и познавательные активности, такие как квизы и ice-breakers, для создания атмосферы дружбы и командного духа.',
+		image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80'
+	}
 ]
 
 const ScenariosSection = () => {
+        const [currentSlide, setCurrentSlide] = useState(0)
+        const [isModalOpen, setIsModalOpen] = useState(false)
         const [sliderRef, instanceRef] = useKeenSlider({
                 loop: true,
                 slides: { perView: 1, spacing: 16 },
@@ -43,6 +46,9 @@ const ScenariosSection = () => {
                         '(min-width: 1024px)': {
                                 slides: { perView: 3, spacing: 32 }
                         }
+                },
+                slideChanged(slider) {
+                        setCurrentSlide(slider.track.details.rel)
                 }
         })
 
@@ -71,6 +77,19 @@ const ScenariosSection = () => {
                                                                         </div>
                                                                 </div>
                                                         </div>
+                                                ))}
+                                        </div>
+                                        <div className='flex justify-center gap-2 mt-4 md:hidden'>
+                                                {scenarios.map((_, idx) => (
+                                                        <button
+                                                                key={idx}
+                                                                onClick={() => instanceRef.current?.moveToIdx(idx)}
+                                                                className={`w-2 h-2 rounded-full ${
+                                                                        currentSlide === idx
+                                                                                ? 'bg-gray-800'
+                                                                                : 'bg-gray-300'
+                                                                }`}
+                                                        />
                                                 ))}
                                         </div>
                                         <button
@@ -109,12 +128,17 @@ const ScenariosSection = () => {
                                         </button>
                                 </div>
                                 <motion.button
+                                        onClick={() => setIsModalOpen(true)}
                                         className='btn-primary px-8 py-3 mt-8'
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
                                 >
                                         Выбрать сценарий
                                 </motion.button>
+                                <OrderModal
+                                        open={isModalOpen}
+                                        onClose={() => setIsModalOpen(false)}
+                                />
                         </div>
                 </section>
         )

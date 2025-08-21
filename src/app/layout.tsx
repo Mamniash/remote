@@ -11,11 +11,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-        title: 'Вовлекатор228',
+        title: 'Вовлекатор',
         description:
                 'Запускайте 4–6-недельные сценарии для повышения вовлечённости и роста NPS на 20%. Автоматизация встреч, напоминаний и отчётов с интеграцией в Telegram, Teams или Slack.',
         icons: {
-                icon: '/logo.png'
+                icon: 'https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=64&q=80'
         }
 }
 

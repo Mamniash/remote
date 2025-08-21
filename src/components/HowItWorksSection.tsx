@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { useKeenSlider } from 'keen-slider/react'
 
@@ -9,19 +9,19 @@ const features = [
                 title: 'Системные циклы, а не разовые мероприятия',
                 description:
                         'Мы предлагаем долгосрочные циклы активности: 4-6 недель, которые постепенно формируют у сотрудников привычку к регулярным взаимодействиям. С каждым циклом растёт не только вовлечённость, но и осознание ценности этих мероприятий для коллектива.',
-                image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80'
+               image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80'
         },
         {
                 title: 'Рандомные встречи для укрепления связей',
                 description:
                         'Еженедельные случайные встречи для улучшения горизонтальных связей. Система автоматически подбирает участников, обеспечивая разнообразие в составах. Это помогает уменьшить барьеры между отделами, локациями и ролями. Встречи сразу попадают в календарь, а система отправляет напоминания в Telegram.',
-                image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'
+               image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'
         },
         {
                 title: 'Интерактивные игры и викторины',
                 description:
                         'Элементы геймификации для поддержания интереса и вовлечённости сотрудников. Игры и викторины могут быть адаптированы под вашу корпоративную культуру.',
-                image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80'
+               image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80'
         },
         {
                 title: 'Опросы и мини-кейсы',
@@ -40,10 +40,11 @@ const features = [
                 description:
                         'Дашборды с детализированными отчётами по активности сотрудников, участию в встречах и результатам взаимодействий. Мы предоставляем удобный экспорт в PDF, чтобы менеджеры и HR могли легко отслеживать эффективность наших сценариев.',
                 image: 'https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=600&q=80'
-        }
+       }
 ]
 
 const HowItWorksSection = () => {
+        const [currentSlide, setCurrentSlide] = useState(0)
         const [sliderRef, instanceRef] = useKeenSlider({
                 loop: true,
                 slides: { perView: 1, spacing: 16 },
@@ -54,6 +55,9 @@ const HowItWorksSection = () => {
                         '(min-width: 1024px)': {
                                 slides: { perView: 3, spacing: 32 }
                         }
+                },
+                slideChanged(slider) {
+                        setCurrentSlide(slider.track.details.rel)
                 }
         })
 
@@ -84,6 +88,19 @@ const HowItWorksSection = () => {
                                                                         </div>
                                                                 </div>
                                                         </div>
+                                                ))}
+                                        </div>
+                                        <div className='flex justify-center gap-2 mt-4 md:hidden'>
+                                                {features.map((_, idx) => (
+                                                        <button
+                                                                key={idx}
+                                                                onClick={() => instanceRef.current?.moveToIdx(idx)}
+                                                                className={`w-2 h-2 rounded-full ${
+                                                                        currentSlide === idx
+                                                                                ? 'bg-gray-800'
+                                                                                : 'bg-gray-300'
+                                                                }`}
+                                                        />
                                                 ))}
                                         </div>
                                         <button

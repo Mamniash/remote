@@ -15,7 +15,7 @@ id='head'
 >
 <div className='container mx-auto px-4 flex flex-col-reverse items-center md:flex-row'>
 <div className='md:w-1/2 text-center md:text-left'>
-<h1 className='text-4xl md:text-5xl font-bold mb-4'>Вовлекатор228</h1>
+<h1 className='text-4xl md:text-5xl font-bold mb-4'>Вовлекатор</h1>
 <p className='text-lg mb-4'>
 Запускайте 4–6-недельные «Сценарии» для повышения вовлечённости и роста NPS на 20%.
 </p>
