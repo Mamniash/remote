@@ -25,9 +25,7 @@ const OrderModal: React.FC<OrderModalProps> = ({ open, onClose }) => {
 		>
 			<div className='text-center p-4'>
 				<Title level={4}>Запустить бота</Title>
-				<Paragraph>
-					Оставьте телефон — отправим ссылку&nbsp;на&nbsp;демо
-				</Paragraph>
+				<Paragraph>Оставьте телефон и начните&nbsp;пользоваться</Paragraph>
 
 				<SubscriptionForm />
 			</div>
